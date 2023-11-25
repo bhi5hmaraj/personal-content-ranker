@@ -33,7 +33,7 @@ tqdm.pandas()
 
 @dataclass
 class ScriptArguments:
-    model_name: str = "facebook/opt-350m"
+    model_name: str = "google/flan-t5-small"
     """the model name"""
     dataset_name: str = "Anthropic/hh-rlhf"
     """the dataset name"""
