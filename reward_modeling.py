@@ -51,7 +51,7 @@ class ScriptArguments:
         default_factory=lambda: RewardConfig(
             output_dir="output",
             per_device_train_batch_size=8,
-            num_train_epochs=10,
+            num_train_epochs=20,
             gradient_accumulation_steps=16,
             gradient_checkpointing=True,
             gradient_checkpointing_kwargs={"use_reentrant": False},
@@ -108,7 +108,7 @@ model = AutoModelForSequenceClassification.from_pretrained(
 # Step 2: Load the dataset and pre-process it
 tokenizer = AutoTokenizer.from_pretrained(args.model_name)
 # train_dataset = load_dataset(args.dataset_name, split="train")
-train_dataset = load_dataset('csv', data_files='/home/bhishma/Nextcloud/Documents/code/personal-content-ranker/pref_data.csv', split='train')
+train_dataset = load_dataset('csv', data_files='pref_data.csv', split='train')
 
 
 # Tokenize chosen/rejected pairs of inputs
