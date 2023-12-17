@@ -25,7 +25,7 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer, Bits
 from trl import RewardConfig, RewardTrainer, is_xpu_available
 
 import torch
-torch.cuda.empty_cache()
+# torch.cuda.empty_cache()
 
 
 tqdm.pandas()
@@ -108,7 +108,7 @@ model = AutoModelForSequenceClassification.from_pretrained(
 # Step 2: Load the dataset and pre-process it
 tokenizer = AutoTokenizer.from_pretrained(args.model_name)
 # train_dataset = load_dataset(args.dataset_name, split="train")
-train_dataset = load_dataset('csv', data_files='pref_data.csv', split='train')
+train_dataset = load_dataset('csv', data_files='output/pref_data.csv', split='train')
 
 
 # Tokenize chosen/rejected pairs of inputs
