@@ -1,0 +1,23 @@
+name: personal-content-ranker
+channels:
+  - apple
+  - conda-forge
+dependencies:
+  - python=3.9.7
+  - pip
+  - ipykernel
+  - pytorch
+
+  ## PyPI packages
+  - pip:
+    - gym==0.21.0
+    - numpy==1.23.2
+    - tensorboard
+    - tyro
+    - trl
+    - peft
+    - datasets
+    - accelerate
+    - tqdm
+    - transformers
+    - scikir-learn
